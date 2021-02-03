@@ -1,0 +1,12 @@
+#git configure
+.git
+
+#inteliJ configure
+.idea
+algorithm.iml
+
+.DS_Store
+.classpath
+.project
+.settings
+bin/*
