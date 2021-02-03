@@ -3,7 +3,7 @@ package algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Algorithm {
+public class BFSAlgorithm {
 
 	public static Integer binarySearch(final List<Integer> source, final Integer target, final Integer min, final Integer max) {
 
