@@ -3,6 +3,7 @@ package algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
+// BFS 형식 템플릿
 public class BFSAlgorithm {
 
 	public static Integer binarySearch(final List<Integer> source, final Integer target, final Integer min, final Integer max) {
