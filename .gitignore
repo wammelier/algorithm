@@ -4,6 +4,7 @@
 #inteliJ configure
 .idea
 algorithm.iml
+out/*
 
 .DS_Store
 .classpath
