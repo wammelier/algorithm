@@ -2,16 +2,42 @@ package algorithm;
 
 public class MultiplicationTable {
 
+	private static class Singleton {
+		private static final MultiplicationTable instance = new MultiplicationTable();
+	}
+
+	public static MultiplicationTable getInstance() { return Singleton.instance; }
+
 	public static void main(final String[] args) {
-		// TODO Auto-generated method stub
 
-		System.out.println("구구단을 외우자~");
+		MultiplicationTable.getInstance().multiple(2);
 
-		for (int i = 2; i < 3; i++)
-			for (int j = 1; j < 10; j++)
-				System.out.print(i + "x" + j + "=" + i * j);
-		// System.out.println("");
+	}
 
+	private MultiplicationTable() {}
+
+	public void multiple(final Integer number) {
+
+		int	num1	= number;
+		int	value	= 1;
+
+		for (int i = 1; i <= 14; i++) {
+			if (i % 4 == 0) {
+				num1	= num1 + 2;
+				value	= 1;
+			}
+
+			for (int j = value; j <= value + 2; j++)
+				System.out.print(num1 * j + " ");
+			System.out.print("    ");
+
+			for (int k = value; k <= value + 2; k++)
+				System.out.print((num1 + 1) * k + " ");
+
+			value = value + 3;
+			System.out.println("");
+
+		}
 	}
 
 }
