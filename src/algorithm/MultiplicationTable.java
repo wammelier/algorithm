@@ -10,6 +10,7 @@ public class MultiplicationTable {
 
 	public static void main(final String[] args) {
 
+		// 처음 시작할 단이 몇단인지 입력
 		MultiplicationTable.getInstance().multiple(2);
 
 	}
