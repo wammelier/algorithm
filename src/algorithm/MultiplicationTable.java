@@ -11,7 +11,7 @@ public class MultiplicationTable {
 	public static void main(final String[] args) {
 
 		// 처음 시작할 단이 몇단인지 입력
-		MultiplicationTable.getInstance().multiple(2);
+		MultiplicationTable.getInstance().multiple(3);
 
 	}
 
@@ -23,10 +23,6 @@ public class MultiplicationTable {
 		int	num1	= number;
 		int	value	= 1;
 		int cal = 9/number;
-		
-		if(number == 9) {
-			
-		}
 
 		for (int i = 1; i <= 3*cal; i++) {
 			if (i != 1 && (i - 1) % 3   == 0) {
@@ -34,12 +30,17 @@ public class MultiplicationTable {
 				value	= 1;
 			}
 			
-			for(int j = start; j <= num1+1; j++) {
+			for(int j = start; j < start + number; j++) {
 				for (int k = value; k <= value + 2; k++) {
 					System.out.printf("%3d", j * k);
-				}
+
+				}// end of innerFor
+
 				System.out.print("   ");
-			}
+				if (j == 9)
+					break;
+			}// end of outerFor
+			start = start + 1;
 
 //			for (int j = value; j <= value + 2; j++)
 //				System.out.printf("%3d", num1 * j);
