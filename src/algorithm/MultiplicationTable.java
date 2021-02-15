@@ -10,8 +10,8 @@ public class MultiplicationTable {
 
 	public static void main(final String[] args) {
 
-		// 처음 시작할 단이 몇단인지 입력
-		MultiplicationTable.getInstance().multiple(3);
+		// 처음 시작할 단이 몇단인지 입력 1 ~ 7 까
+		MultiplicationTable.getInstance().multiple(7);
 
 	}
 
@@ -24,12 +24,17 @@ public class MultiplicationTable {
 		int	value	= 1;
 		int cal = 9/number;
 
+		if (number > 4 && number < 8) {
+			cal ++;
+		}
+
 		for (int i = 1; i <= 3*cal; i++) {
-			if (i != 1 && (i - 1) % 3   == 0) {
+			if (i != 1 && (i - 1) % 3 == 0) {
 //				num1	= num1 + 2;
 				value	= 1;
+				start = start + number;
 			}
-			
+
 			for(int j = start; j < start + number; j++) {
 				for (int k = value; k <= value + 2; k++) {
 					System.out.printf("%3d", j * k);
@@ -40,7 +45,7 @@ public class MultiplicationTable {
 				if (j == 9)
 					break;
 			}// end of outerFor
-			start = start + 1;
+
 
 //			for (int j = value; j <= value + 2; j++)
 //				System.out.printf("%3d", num1 * j);
