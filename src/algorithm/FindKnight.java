@@ -1,0 +1,23 @@
+package algorithm;
+
+public class FindKnight {
+
+	private int	first;
+	private int	last;
+	private int	maxSize;
+
+	public FindKnight(final int maxSize) {
+		first					= 0;
+		last					= -1;
+		this.maxSize	= maxSize;
+	}
+
+	public boolean empty() {
+		return first == last + 1;
+	}
+
+	public boolean full() {
+		return first == maxSize;
+	}
+
+}
