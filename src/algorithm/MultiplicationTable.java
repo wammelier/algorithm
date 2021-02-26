@@ -10,8 +10,8 @@ public class MultiplicationTable {
 
 	public static void main(final String[] args) {
 
-		// 처음 시작할 단이 몇단인지 입력 1 ~ 7 까
-		MultiplicationTable.getInstance().multiple(7);
+		// 처음 시작할 단이 몇단인지 입력
+		MultiplicationTable.getInstance().multiple(3);
 
 	}
 
@@ -19,42 +19,25 @@ public class MultiplicationTable {
 
 	public void multiple(final Integer number) {
 
-		int start = 2;
-		int	num1	= number;
+		int	start	= 2;
 		int	value	= 1;
-		int cal = 9/number;
+		int	cal		= 8 % number;
+		if (8 % number != 0)
+			cal++;
 
-		if (number > 4 && number < 8) {
-			cal ++;
-		}
-
-		for (int i = 1; i <= 3*cal; i++) {
+		for (int i = 1; i <= 3 * cal; i++, value += 3) {
 			if (i != 1 && (i - 1) % 3 == 0) {
-//				num1	= num1 + 2;
+				// num1 = num1 + 2;
 				value	= 1;
-				start = start + number;
+				start	= start + number;
 			}
 
-			for(int j = start; j < start + number; j++) {
-				for (int k = value; k <= value + 2; k++) {
+			for (int j = start; j < start + number && j != 9; j++) {
+				for (int k = value; k <= value + 2; k++)
 					System.out.printf("%3d", j * k);
-
-				}// end of innerFor
-
 				System.out.print("   ");
-				if (j == 9)
-					break;
-			}// end of outerFor
+			} // end of outerFor
 
-
-//			for (int j = value; j <= value + 2; j++)
-//				System.out.printf("%3d", num1 * j);
-//			System.out.print("    ");
-//
-//			for (int k = value; k <= value + 2; k++)
-//				System.out.printf("%3d", (num1 + 1) * k);
- 
-			value = value + 3;
 			System.out.println("");
 
 		}
